@@ -9,13 +9,27 @@
         left: 0px;
         background: transparent;
       }
+      #background {
+        z-index: -2;
+      }
+      #main {
+        z-index: -1;
+      }
+      #ship {
+        z-index: 0;
+      }
     </style>
   </head>
-  <body onload="init ()">
-    <!-- canvas for panning background -->
+  <body>
+    <!-- Canvas for panning background. -->
     <canvas id="background" width="600" height="360">
       Your browser does not support canvas.
     </canvas>
+    <!-- Canvas for enemy ships and all bullets. -->
+    <canvas id="main" width="600" height="360">
+    </canvas>
+    <!-- Canvas for player ship (limited to 1/4 height of screen). -->
+    <canvas id="ship" width="600" height="360">
     <script src="main.js"></script>
   </body>
 </html>
